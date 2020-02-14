@@ -32,6 +32,17 @@
   }
 }
 
+
+h1 {
+  margin: 10px 40%;
+}
+.logo {
+  background-image: url('./fifa_logo.png');
+  height: 150px;
+  margin: 10px 40%;
+  background-repeat: no-repeat;
+}
+
 .dark-mode__toggle{
   background: red;
   border-radius: 50px;
@@ -44,7 +55,7 @@
 .toggle {
   background: white;
   border-radius: 50px;
-  height: 10px;
+  height: 15px;
   left: 0;
   position: absolute;
   transition: 0.2s;
@@ -68,34 +79,48 @@
 }
 
 
-.displayMain {
+/* .displayMain {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .tableContainer {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: center;
+
 }
 
-thead {
+.tableHead {
   background-color: navy;
   color: white;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  text-align: center;
+  margin: 0;
+  justify-content: space-between;
   width: 100%;
 
 }
 
 tbody {
   display: flex;
-  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.playerInfo {
+  border: 1px solid red;
+  margin: 0;
   justify-content: space-between;
-  align-items: stretch;
+  width: 100%;
+}
+
+td {
+  width: 300px;
+  text-align: right;
+}
+
+th {
+  width: 300px;
+  text-align: right;
 }
