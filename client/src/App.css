@@ -12,7 +12,7 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -30,4 +30,72 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.dark-mode__toggle{
+  background: red;
+  border-radius: 50px;
+  border: 1px solid white;
+  height: 15px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+  background: white;
+  border-radius: 50px;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+}
+
+
+.toggled{
+  left: 18px;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #031531;
+}
+
+.header {
+  color: white;
+  background-color: navy;
+  border: none;
+}
+
+
+.displayMain {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+thead {
+  background-color: navy;
+  color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+
+}
+
+tbody {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
 }

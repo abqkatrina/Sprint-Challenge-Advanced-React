@@ -13,9 +13,9 @@ const Header = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="header">
       <h1>Women's World Cup Stars</h1>
-      <img src={'img/fifa_logo.png'} alt={'fifa logo'}/>
+      <img src={'client\src\fifa_logo.png'} alt={'fifa logo'}/>
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}

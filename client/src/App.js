@@ -30,7 +30,14 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <div>
+        <div className='tableContainer'>
+          <thead>
+            <tr className='tableHead'>  
+                <th>Player Name</th>   
+                <th>Team</th>
+                <th>Searches</th>
+            </tr>
+          </thead>
           {this.state.players.map( player => {
             return <Display player={player} key={player.id}/>
           })}
