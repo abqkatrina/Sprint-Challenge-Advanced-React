@@ -2,6 +2,7 @@ import React from 'react';
 import useDarkMode from './useDarkMode';
 
 
+
 const Header = () => {
 
   const [darkMode, setDarkMode] = useDarkMode(false);
@@ -14,6 +15,7 @@ const Header = () => {
   return (
     <nav className="navbar">
       <h1>Women's World Cup Stars</h1>
+      <img src={'img/fifa_logo.png'} alt={'fifa logo'}/>
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
@@ -21,7 +23,7 @@ const Header = () => {
         />
       </div>
     </nav>
-  )
+  );
 };
 
 export default Header;
