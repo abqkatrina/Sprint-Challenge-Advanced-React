@@ -7,17 +7,22 @@ import "./App.css";
 class App extends Component {
 
     state = {
-      player: {},
-      players: []
+      players: [],
+      playersData: [],
+      player: {}
     }
   
 
   componentDidMount(){
     axios.get("http://localhost:5000/api/players")
       .then( response => {
-        console.log(response.data)
-        this.setState({ players: [...this.state.players, response.data]})
-      })
+        // console.log(response.data)
+        this.setState({ playersData: [...this.state.playersData, response.data]})
+          console.log(this.state.playersData)
+          this.state.playersData.map( players => {
+            this.setState({players: players })
+            console.log(players)
+      })})
       .catch(error => console.log( 'axios didn\'t get', error));
   };
 
@@ -27,9 +32,7 @@ class App extends Component {
         <Header />
         <div>
           {this.state.players.map( player => {
-            return(
-              <Display player={player} key={player.name}/>
-            )
+            return <Display player={player} key={player.id}/>
           })}
         </div>
       </div>
